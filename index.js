@@ -5,15 +5,36 @@ var menuLinks = [
     { text: 'catalog', href: '/catalog' },
     { text: 'orders', href: '/orders' },
     { text: 'account', href: '/account' },
+    // { text: 'account', href: '/account' },
+    // { text: 'a', href: '/account' },
+    // { text: 'b', href: '/account' },
+    // { text: 'f', href: '/account' },
+    // { text: 'ad', href: '/account' },
   ];
 
-//   const callbackFunction(text,href) => (){}
-// menuLinks.forEach('about')
+
+// how to access an element in an array
+console.log(menuLinks[0]) //pulls first item in an array
+console.log(menuLinks[0].href)
+
+for(let i = 0; i < 10; i++){
+    console.log(i)
+} // (): condition for loop {}: what I want to happen once it loops
+
+
+// for each loop
+menuLinks.forEach((item) => {
+    console.log (item.text)
+})
+
+
+
+
+
 
 // Part 3:
-
 const nav = document.querySelector('nav')
-
+// add nav bar
     for (var i = 0; i < menuLinks.length; i++) {
         var link = menuLinks[i];
         var menuItem = document.createElement('a');
