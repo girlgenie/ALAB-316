@@ -31,19 +31,23 @@ var menuLinks = [
   console.log(menuLinks)
 
 
-// how to access an element in an array
+// how to access an element in an array------------------------------
+// ------------------------------------------------------============
 // console.log(menuLinks[0]) //pulls first item in an array
 // console.log(menuLinks[0].href)
+// ------------------------------------------------------------------
+// ==================================================================
 
 for(let i = 0; i < 10; i++){
     console.log(i)
 } // (): condition for loop {}: what I want to happen once it loops
 
 
-// for each loop
-menuLinks.forEach((item) => {
-    console.log (item.text)
-})
+// GOOD TO KNOW: how to use for each loop in an array below ===============================
+// menuLinks.forEach((item) => {
+//     console.log (item.text)
+// })
+// ========================================================================================
 
 
 // Part 3:
@@ -56,6 +60,7 @@ const nav = document.querySelector('nav')
         menuItem.href = link.href;
         nav.appendChild(menuItem);
     }
+    console.log(menuItem)
 
 const mainEl = document.querySelector('main'); 
 mainEl.style.backgroundColor = 'var(--main-bg)';
@@ -92,5 +97,10 @@ document.getElementById("sub-menu").style.top = 0;
 
 
 // Part 4: Adding Menu Interaction----------------------------------------------------------------
-
+// Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
+const topMenuLinks = topMenuEl.querySelectorAll('a');   // HELP! RETURNING NodeList(4) [a, a, a, a] INSTEAD OF MENU ITEM NAMES
+// Attach a delegated 'click' event listener to topMenuEl.
+topMenuEl.addEventListener("click", (event) => {})
+console.log(topMenuEl)
+console.log(topMenuLinks)
 console.log(subMenuEl)
