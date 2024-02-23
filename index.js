@@ -111,7 +111,16 @@ topMenuEl.addEventListener("click", (event) => {
     console.log(event.target.textContent)
 });
 
+// Now that we have references to each of these links, and a registered event listener, we will want to add a toggled "active" state to each menu item, showing whether or not it is currently selected:
 
+var clicked = document.getElementById('a');
+for (var i = 0; i < clicked; i++) {
+    clicked[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
 console.log(topMenuEl)
 console.log(topMenuLinks)
 console.log(subMenuEl)
