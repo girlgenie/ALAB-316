@@ -100,7 +100,18 @@ document.getElementById("sub-menu").style.top = 0;
 // Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
 const topMenuLinks = topMenuEl.querySelectorAll('a');   // HELP! RETURNING NodeList(4) [a, a, a, a] INSTEAD OF MENU ITEM NAMES
 // Attach a delegated 'click' event listener to topMenuEl.
-topMenuEl.addEventListener("click", (event) => {})
+topMenuEl.addEventListener("click", (event) => {
+    // The first line of code of the event listener function should call the event object's preventDefault() method
+    event.preventDefault()
+    // The second line of code of the function should immediately return if the element clicked was not an <a> element.
+    if (!event.target.matches('a')) {
+        // Immediately return if the element clicked was not an <a> element
+        return
+    }
+    console.log(event.target.textContent)
+});
+
+
 console.log(topMenuEl)
 console.log(topMenuLinks)
 console.log(subMenuEl)
