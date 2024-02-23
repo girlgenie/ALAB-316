@@ -58,4 +58,5 @@ topMenuEl.classList.add("flex-around");
 const subMenuEl = document.getElementById('sub-menu');
 subMenuEl.style.height = "100%"; 
 subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'; 
+subMenuEl.classList.add("flex-around"); 
 console.log(subMenuEl)
