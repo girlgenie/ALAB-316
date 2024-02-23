@@ -1,21 +1,39 @@
 
 // Menu data structure
+// original menuLinks code before part 4 starts here ------------
+// var menuLinks = [
+//     { text: 'about', href: '/about' },
+//     { text: 'catalog', href: '/catalog' },
+//     { text: 'orders', href: '/orders' },
+//     { text: 'account', href: '/account' },
+//   ];
+//   original menuLinks code before part 4 ends here ------------
+
+// updated menuLinks code for part 4 starts here ----------------
 var menuLinks = [
-    { text: 'about', href: '/about' },
-    { text: 'catalog', href: '/catalog' },
-    { text: 'orders', href: '/orders' },
-    { text: 'account', href: '/account' },
-    // { text: 'account', href: '/account' },
-    // { text: 'a', href: '/account' },
-    // { text: 'b', href: '/account' },
-    // { text: 'f', href: '/account' },
-    // { text: 'ad', href: '/account' },
+    {text: 'about', href: '/about'},
+    {text: 'catalog', href: '#', subLinks: [
+      {text: 'all', href: '/catalog/all'},
+      {text: 'top selling', href: '/catalog/top'},
+      {text: 'search', href: '/catalog/search'},
+    ]},
+    {text: 'orders', href: '#' , subLinks: [
+      {text: 'new', href: '/orders/new'},
+      {text: 'pending', href: '/orders/pending'},
+      {text: 'history', href: '/orders/history'},
+    ]},
+    {text: 'account', href: '#', subLinks: [
+      {text: 'profile', href: '/account/profile'},
+      {text: 'sign out', href: '/account/signout'},
+    ]},
   ];
+//   updated menuLinks code for part 4 ends here ------------------
+  console.log(menuLinks)
 
 
 // how to access an element in an array
-console.log(menuLinks[0]) //pulls first item in an array
-console.log(menuLinks[0].href)
+// console.log(menuLinks[0]) //pulls first item in an array
+// console.log(menuLinks[0].href)
 
 for(let i = 0; i < 10; i++){
     console.log(i)
