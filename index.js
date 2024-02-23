@@ -28,10 +28,6 @@ menuLinks.forEach((item) => {
 })
 
 
-
-
-
-
 // Part 3:
 const nav = document.querySelector('nav')
 // add nav bar
@@ -53,5 +49,13 @@ mainEl.classList.add('flex-ctr')
 // Part 2:
 const topMenuEl = document.getElementById("top-menu");
 topMenuEl.style.height = "100%";
+console.log(topMenuEl)
 topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 topMenuEl.classList.add("flex-around");
+
+
+// Part 2-------------------------------------------------------------
+const subMenuEl = document.getElementById('sub-menu');
+subMenuEl.style.height = "100%"; 
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'; 
+console.log(subMenuEl)
